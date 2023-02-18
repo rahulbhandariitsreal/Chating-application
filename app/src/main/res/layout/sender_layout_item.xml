@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="chats"
+            type="com.example.mychat.modal.Chats" />
+        <variable
+            name="user"
+            type="com.example.mychat.modal.User" />
+    </data>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image_sender"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        bind:imageURI="@{user.imageURI}"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_toLeftOf="@+id/TV_sender_message"
+        android:src="@drawable/add_user"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="@dimen/_2sdp" />
+
+    <TextView
+        android:id="@+id/TV_sender_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/sender_shape"
+        android:padding="@dimen/_7sdp"
+        android:text="@{chats.message}"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+</layout>

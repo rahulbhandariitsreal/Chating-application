@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/shape_dialogue"
+    android:layout_margin="@dimen/_10sdp"
+    android:padding="@dimen/_5sdp"
+    android:layout_gravity="center"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/logout"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/image"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you want to Log Out?"
+        android:layout_below="@+id/image"
+        android:id="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="italic"
+        android:layout_marginTop="@dimen/_20sdp"
+        />
+
+    <TextView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="wrap_content"
+        android:id="@+id/yes_logout"
+        android:text="YES"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/primary_color"
+        android:layout_below="@+id/title"
+        android:textSize="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        />
+    <TextView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="wrap_content"
+        android:id="@+id/no_logout"
+        android:text="NO"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="#5C7078"
+        android:layout_below="@+id/title"
+        android:textSize="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_200sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        />
+
+
+</RelativeLayout>

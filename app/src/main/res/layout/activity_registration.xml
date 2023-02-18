@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.RegistrationActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_account"
+        android:textSize="35sp"
+        android:id="@+id/create"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/black"
+        android:layout_marginTop="25sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image_reciever"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_below="@+id/create"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:civ_border_width="@dimen/_2sdp"
+        android:src="@drawable/adduser"
+        app:civ_border_color="#FF000000"/>
+
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textSize="@dimen/textvalue"
+        android:id="@+id/ETemail_reg"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:hint="@string/email"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/edittext_shape"
+        />
+
+    <EditText
+        android:id="@+id/ETpass_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ETemail_reg"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_centerVertical="true"
+        android:inputType="textPassword"
+        android:textSize="@dimen/textvalue"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:hint="Password"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/edittext_shape"
+        />
+
+    <EditText
+        android:id="@+id/ET_username_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ETpass_reg"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_17sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/edittext_shape"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:singleLine="true"
+        android:padding="10dp"
+        android:textSize="@dimen/textvalue" />
+
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ETpass_reg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_sign_btn"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="Sign up"
+        android:textColor="@color/white"
+        android:textSize="25dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="39dp"
+            android:text="Already Registered.. "
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/btnSignin"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="41dp"
+            android:text="Sign in "
+            android:textColor="@color/primary_color"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

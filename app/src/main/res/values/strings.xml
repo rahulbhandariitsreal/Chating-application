@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyChat</string>
+    <string name="create_account">Create Account</string>
+    <string name="email">Email</string>
+    <string name="username">UserName</string>
+    <string name="type_your_message">Type message</string>
+</resources>

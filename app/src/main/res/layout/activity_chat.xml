@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="user"
+            type="com.example.mychat.modal.User" />
+        <variable
+            name="clickHandlers"
+            type="com.example.mychat.view.ChatActivity.ChatActivityClickHandlers" />
+        <variable
+            name="chats"
+            type="com.example.mychat.modal.Chats" />
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ChatActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll1"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/profile_image_chat"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_below="@+id/create"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:civ_border_width="@dimen/_2sdp"
+            bind:imageURI="@{user.imageURI}"
+            android:src="@drawable/add_user"
+            app:civ_border_color="@color/primary_color"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.name}"
+            android:gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            android:id="@+id/reciever_name"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_above="@+id/ll3"
+        android:layout_height="wrap_content"
+        android:id="@+id/chatrecycler"
+        android:layout_below="@+id/ll1"
+        />
+
+
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_margin="@dimen/_2sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_3sdp"
+            app:cardCornerRadius="@dimen/_540sdp"
+            app:cardBackgroundColor="#8D7DAC">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/EDTmessage"
+                android:layout_gravity="center_vertical"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="@={chats.message}"
+                android:layout_height="wrap_content"
+                android:hint="@string/type_your_message"
+                android:background="@null"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Cardview"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_3sdp"
+            app:cardCornerRadius="@dimen/_540sdp"
+            app:cardBackgroundColor="@color/primary_color">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:onClick="@{clickHandlers::sendmessage}"
+                android:background="@drawable/logochat"
+                android:layout_gravity="center"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</RelativeLayout>
+</layout>

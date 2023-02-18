@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="user"
+            type="com.example.mychat.modal.User" />
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_item"
+   android:layout_margin="@dimen/_1sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_user"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/create"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/_10sdp"
+            app:civ_border_width="@dimen/_2sdp"
+            android:src="@drawable/profile"
+            app:civ_border_color="#FF000000"
+            bind:imageURI="@{user.imageURI}"
+            />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+      android:layout_gravity="center">
+
+     <TextView
+         android:id="@+id/user_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@{user.name}"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    android:textSize="@dimen/_15sdp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{user.status}"
+                android:id="@+id/user_status"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                android:textSize="@dimen/_15sdp"
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+</layout>
