@@ -30,6 +30,12 @@ private Context context;
       this.context=context;
     }
 
+    public void updatechatsuser(ArrayList<User> userArrayList){
+       this.userArrayList.clear();
+       this.userArrayList=userArrayList;
+       notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

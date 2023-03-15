@@ -118,13 +118,9 @@ binding.settingbtn.setOnClickListener(new View.OnClickListener() {
             public void onChanged(ArrayList<User> users) {
 
               userArrayList.clear();
-
                 for(User user:users) {
-
                     userArrayList.add(user);
-
                 }
-
                 showOnrecycler();
             }
         });
@@ -139,7 +135,6 @@ binding.settingbtn.setOnClickListener(new View.OnClickListener() {
         binding.mainUserRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.mainUserRecyclerView.setHasFixedSize(true);
         binding.mainUserRecyclerView.setAdapter(userAdapter);
-
         userAdapter.notifyDataSetChanged();
     }
 }

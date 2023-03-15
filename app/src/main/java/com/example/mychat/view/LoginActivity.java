@@ -95,7 +95,6 @@ startActivity(new Intent(LoginActivity.this,HomeActivity.class));
                         binding.ETemailLog.setError("Inavlid Email");
                         binding.ETpassLogin.setError("Inavlid Password");
                     }else if(res==1) {
-
                         Intent i = new Intent(LoginActivity.this, HomeActivity.class);
                         i.putExtra(Utility.USER_KEY, newuser);
                         startActivity(i);

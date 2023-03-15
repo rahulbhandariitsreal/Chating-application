@@ -86,17 +86,12 @@ private RecyclerView recyclerView;
         currentUser=User.getInstance();
 
 
-
-
         clickHandlers=new ChatActivityClickHandlers(this);
 
         activityChatBinding.setClickHandlers(clickHandlers);
 
 
-
         userViewModel=new ViewModelProvider(this).get(UserViewModel.class);
-
-
 
 
        Log.v("dbharry",""+currentUser.getImageURI());

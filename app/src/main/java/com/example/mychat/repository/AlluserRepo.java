@@ -19,6 +19,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class AlluserRepo {
 
@@ -58,7 +59,8 @@ private Application application;
                 for (DataSnapshot snapshot1:snapshot.getChildren()){
                     //adding all the users
                     User user=snapshot1.getValue(User.class);
-                    if(!user.getUid().equals(auth.getCurrentUser().getUid()))
+                    assert user != null;
+                    if(!user.getUid().equals(Objects.requireNonNull(auth.getCurrentUser()).getUid()))
                         userArrayList.add(user);
                 }
                 arrayListLiveDatauserlist.setValue(userArrayList);
